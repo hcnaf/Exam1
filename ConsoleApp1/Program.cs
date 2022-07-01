@@ -20,6 +20,9 @@ namespace ConsoleApp1
 
             var primeRes = FilterByPredicate.FilterBy(primeTestCases, primePredicate);
             Console.WriteLine(string.Join(", ", primeRes));
+
+            Console.ReadLine();
+            // Test change
         }
     }
 }
