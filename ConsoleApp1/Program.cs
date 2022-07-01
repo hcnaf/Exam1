@@ -16,9 +16,9 @@ namespace ConsoleApp1
 
 
             IPredicate primePredicate = new PrimePredicate();
-            var primeTestCases = new[] { 67, 33, 81, 71, 73, 66, 82, 79, 12, 55, 646, 83, 89, 97, 98, 34, 101, 103 } //67, 71, 73, 79, 83, 89, 97, 101, 103
+            var primeTestCases = new[] { 67, 33, 81, 71, 73, 66, 82, 79, 12, 55, 646, 83, 89, 97, 98, 34, 101, 103 }; //67, 71, 73, 79, 83, 89, 97, 101, 103
 
-            var primeRes = FilterByPredicate.FilterBy(testCases, palindromicPredicate);
+            var primeRes = FilterByPredicate.FilterBy(primeTestCases, primePredicate);
             Console.WriteLine(string.Join(", ", primeRes));
         }
     }
