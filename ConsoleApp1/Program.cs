@@ -1,4 +1,5 @@
-﻿using ConsoleApp1.Predicates;
+﻿using ConsoleApp1.PizzaDecorators;
+using ConsoleApp1.Pizzas;
 using System;
 
 namespace ConsoleApp1
@@ -7,22 +8,21 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            IPredicate palindromicPredicate = new PalindromicPredicate();
-            var testCases = new[] { 2212332, 0, 1405644, 12345, 1, -1236674, 123321, 1111111 }; //0, 1, 123321, 1111111
+            Pizza pizza1 = new ItalianPizza();
+            pizza1 = new TomatoPizza(pizza1); // итальянская пицца с томатами
+            Console.WriteLine("Название: {0}", pizza1.Name);
+            Console.WriteLine("Цена: {0}", pizza1.GetCost());
 
-            var res = FilterByPredicate.FilterBy(testCases, palindromicPredicate);
-            Console.WriteLine(string.Join(", ", res));
+            Pizza pizza2 = new ItalianPizza();
+            pizza2 = new CheesePizza(pizza2);// итальянская пиццы с сыром
+            Console.WriteLine("Название: {0}", pizza2.Name);
+            Console.WriteLine("Цена: {0}", pizza2.GetCost());
 
-
-
-            IPredicate primePredicate = new PrimePredicate();
-            var primeTestCases = new[] { 67, 33, 81, 71, 73, 66, 82, 79, 12, 55, 646, 83, 89, 97, 98, 34, 101, 103 }; //67, 71, 73, 79, 83, 89, 97, 101, 103
-
-            var primeRes = FilterByPredicate.FilterBy(primeTestCases, primePredicate);
-            Console.WriteLine(string.Join(", ", primeRes));
-
-            Console.ReadLine();
-            // Test change
+            Pizza pizza3 = new BulgarialPizza();
+            pizza3 = new TomatoPizza(pizza3);
+            pizza3 = new CheesePizza(pizza3);// болгарская пиццы с томатами и сыром
+            Console.WriteLine("Название: {0}", pizza3.Name);
+            Console.WriteLine("Цена: {0}", pizza3.GetCost());
         }
     }
 }
