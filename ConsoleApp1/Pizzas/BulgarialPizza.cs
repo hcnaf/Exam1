@@ -9,7 +9,7 @@ namespace ConsoleApp1.Pizzas
     internal class BulgarialPizza : Pizza
     {
         public BulgarialPizza()
-               : base("Болгарская пицца") { }
+               : base("Bulgarial pizza") { }
 
         public override int GetCost()
         {

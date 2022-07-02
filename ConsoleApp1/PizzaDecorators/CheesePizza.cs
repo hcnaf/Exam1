@@ -9,7 +9,7 @@ namespace ConsoleApp1.PizzaDecorators
     public class CheesePizza : PizzaDecorator
     {
         public CheesePizza(Pizza p)
-               : base(p.Name + ", с сыром", p)
+               : base(p.Name + ", with cheese", p)
         { }
 
         public override int GetCost()

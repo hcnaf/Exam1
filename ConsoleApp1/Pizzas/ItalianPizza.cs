@@ -2,7 +2,7 @@
 {
     internal class ItalianPizza : Pizza
     {
-        public ItalianPizza() : base("Итальянская пицца")
+        public ItalianPizza() : base("Italian pizza")
         { }
 
         public override int GetCost()

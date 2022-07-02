@@ -9,7 +9,7 @@ namespace ConsoleApp1.PizzaDecorators
     internal class TomatoPizza : PizzaDecorator
     {
         public TomatoPizza(Pizza p)
-               : base(p.Name + ", с томатами", p)
+               : base(p.Name + ", with tomatoes", p)
         { }
 
         public override int GetCost()
@@ -17,3 +17,4 @@ namespace ConsoleApp1.PizzaDecorators
             return pizza.GetCost() + 3;
         }
     }
+}
